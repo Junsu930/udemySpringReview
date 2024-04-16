@@ -7,7 +7,7 @@ import com.in28minutes.springboot.learnjpaandhibernate.course.springdatajpa.Cour
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
-
+import java.util.*;
 @Component
 public class CourseCommandLineRunner implements CommandLineRunner {
 
@@ -27,5 +27,6 @@ public class CourseCommandLineRunner implements CommandLineRunner {
         System.out.println(repository.count());
         System.out.println(repository.findByAuthor("Sehee"));
         System.out.println(repository.findByName("Learn Trumpet"));
+
     }
 }
