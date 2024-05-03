@@ -10,7 +10,9 @@
     <title>Document</title>
 </head>
 <body>
-    <div>Welcome ${name}</div>
-    <div><a href="list-todos">Manage</a> Your Todos</div>
+    <div class="container">
+        <div>Welcome ${name}</div>
+        <div><a href="list-todos">Manage</a> Your Todos</div>
+    </div>
 </body>
 </html>

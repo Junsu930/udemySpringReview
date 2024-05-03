@@ -11,19 +11,19 @@
     <title>List Todos Page</title>
 </head>
 <body>
-    <div>Welcome</div>
-    <hr>
+
+<div class="container">
     <div><h1>Your Todos</h1></div>
-    <table>
-        <thead>
+        <table class="table">
+            <thead>
             <tr>
                 <th>ID</th>
                 <th>Description</th>
                 <th>Target Date</th>
                 <th>Is Done</th>
             </tr>
-        </thead>
-        <tbody>
+            </thead>
+            <tbody>
             <c:forEach items="${todos}" var="todos">
                 <tr>
                     <td>${todos.id}</td>
@@ -32,8 +32,10 @@
                     <td>${todos.done}</td>
                 </tr>
             </c:forEach>
-        </tbody>
-    </table>
+            </tbody>
+        </table>
+    <a href="add-todo" class="btn btn-success">Add Todo</a>
+</div>
     <script src="webjars/bootstrap/5.1.3/js/bootstrap.min.js"></script>
     <script src="webjars/jquery/3.6.0/jquery.min.js"></script>
 </body>
