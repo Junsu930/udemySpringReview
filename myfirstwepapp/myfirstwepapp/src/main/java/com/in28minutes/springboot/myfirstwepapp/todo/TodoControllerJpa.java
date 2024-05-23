@@ -10,26 +10,31 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.SessionAttributes;
 
 import java.time.LocalDate;
 import java.util.List;
 
-//@Controller
-public class TodoController {
+@Controller
+@SessionAttributes("name")
+public class TodoControllerJpa {
 
-    public TodoController(TodoService todoService){
+    public TodoControllerJpa(TodoService todoService, TodoRepository todoRepository){
         super();
         this.todoService = todoService;
+        this.todoRepository = todoRepository;
     }
 
-    @Autowired
     private TodoService todoService;
+
+    private TodoRepository todoRepository;
 
     // /list-todos
     @RequestMapping("list-todos")
     public String listAllTodos (ModelMap model){
+
         String username = getLoggedInUsername(model);
-        List<Todo> todos = todoService.findByUsername(username);
+        List<Todo> todos = todoRepository.findByUsername(username);
         model.put("todos", todos);
 
         return "listTodos";
