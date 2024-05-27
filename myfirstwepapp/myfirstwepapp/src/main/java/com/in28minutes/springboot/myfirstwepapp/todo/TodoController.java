@@ -1,6 +1,8 @@
 package com.in28minutes.springboot.myfirstwepapp.todo;
 
 import jakarta.validation.Valid;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -16,20 +18,22 @@ import java.util.List;
 
 //@Controller
 public class TodoController {
+    Logger logger = LoggerFactory.getLogger(TodoController.class);
 
-    public TodoController(TodoService todoService){
+    public TodoController(TodoService todoService,TodoRepository todoRepository){
         super();
         this.todoService = todoService;
+        this.todoRepository = todoRepository;
     }
 
-    @Autowired
     private TodoService todoService;
+    private TodoRepository todoRepository;
 
     // /list-todos
     @RequestMapping("list-todos")
     public String listAllTodos (ModelMap model){
         String username = getLoggedInUsername(model);
-        List<Todo> todos = todoService.findByUsername(username);
+        List<Todo> todos = todoRepository.findByUsername(username);
         model.put("todos", todos);
 
         return "listTodos";
@@ -49,7 +53,12 @@ public class TodoController {
             return "todo";
         }
         String username = getLoggedInUsername(model);
-        todoService.addTodo(username, todo.getDescription(),todo.getTargetDate(),false);
+        todo.setUsername(username);
+        System.out.println(username);
+
+        todoRepository.save(todo);
+
+//      todoService.addTodo(username, todo.getDescription(),todo.getTargetDate(), todo.isDone());
 
         return "redirect:list-todos";
     }
@@ -57,7 +66,7 @@ public class TodoController {
     @RequestMapping(value = "delete-todo", method = RequestMethod.GET)
     public String deleteTodo(@RequestParam("id") int id){
         // Delete
-        todoService.deleteById(id);
+        todoRepository.deleteById(id);
 
         return "redirect:list-todos";
     }
@@ -69,7 +78,7 @@ public class TodoController {
         }
         String username = getLoggedInUsername(model);
         todo.setUsername(username);
-        todoService.updateTodo(todo);
+        todoRepository.save(todo);
 
         return "redirect:list-todos";
     }
@@ -88,6 +97,4 @@ public class TodoController {
 
         return authentication.getName();
     }
-
-
 }
