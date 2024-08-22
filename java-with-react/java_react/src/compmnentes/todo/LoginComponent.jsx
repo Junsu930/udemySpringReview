@@ -1,11 +1,10 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { AuthContext, useAuth } from './security/AuthContext';
+import { useAuth } from './security/AuthContext';
 
 export default function LoginComponent() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
-  const [showSuccessMessage, setShowSuccessMessage] = useState(false);
   const [showErrorMessage, setShowErrorMessage] = useState(false);
 
   const navigate = useNavigate();
@@ -17,17 +16,21 @@ export default function LoginComponent() {
   const handlePasswordChange = (e) => {
     setPassword(e.target.value);
   };
-  const handleSubmit = () => {
-    if (authContext.login(username, password)) {
+  const handleSubmit = async () => {
+    if (await authContext.login(username, password)) {
       navigate(`/welcome/${username}`);
     } else {
       navigate('/login');
+      setShowErrorMessage(true);
     }
   };
 
   return (
     <div className="Login">
       <h1>Login Page!</h1>
+      {showErrorMessage && (
+        <div>Login Failed. Please Try another Id or Password</div>
+      )}
 
       <div className="LoginForm">
         <div>
@@ -52,6 +55,7 @@ export default function LoginComponent() {
           <button type="button" name="login" onClick={handleSubmit}>
             login
           </button>
+          {showErrorMessage && <div>Login Falied</div>}
         </div>
       </div>
     </div>

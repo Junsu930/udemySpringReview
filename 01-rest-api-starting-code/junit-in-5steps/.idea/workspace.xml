@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="adae841b-16dc-4f33-aa4e-f13823dccafc" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../01-rest-api-starting-code/src/main/java/com/in28minutes/rest/webservices/restfulwebservices/basic/BasicAuthenticationSecurityConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../01-rest-api-starting-code/src/main/java/jazzArch/BoardServicd.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../01-rest-api-starting-code/src/main/java/jazzArch/JazzWebServicesApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-with-react/java_react/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../java-with-react/java_react/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-with-react/java_react/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../java-with-react/java_react/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-with-react/java_react/src/compmnentes/todo/ListTodosComponent.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../java-with-react/java_react/src/compmnentes/todo/ListTodosComponent.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-with-react/java_react/src/compmnentes/todo/LoginComponent.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../java-with-react/java_react/src/compmnentes/todo/LoginComponent.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-with-react/java_react/src/compmnentes/todo/TodoApp.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../java-with-react/java_react/src/compmnentes/todo/TodoApp.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-with-react/java_react/src/compmnentes/todo/WelcomeComponent.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../java-with-react/java_react/src/compmnentes/todo/WelcomeComponent.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-with-react/java_react/src/compmnentes/todo/security/AuthContext.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../java-with-react/java_react/src/compmnentes/todo/security/AuthContext.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../learn-spring-framework-01/learn-spring-framework" beforeDir="false" afterPath="$PROJECT_DIR$/../../learn-spring-framework-01/learn-spring-framework" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../restful-web-services/restful-web-services/src/main/java/com/junsu/rest/webservice/restful_web_services/RestfulWebServicesApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../restful-web-services/restful-web-services/src/main/java/com/junsu/rest/webservice/restful_web_services/RestfulWebServicesApplication.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 7
+}]]></component>
+  <component name="ProjectId" id="2l0FUhcA99fZOQmQLbLE7PBthY4" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
+    "project.structure.last.edited": "SDKs",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="adae841b-16dc-4f33-aa4e-f13823dccafc" name="Changes" comment="" />
+      <created>1724309107392</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1724309107392</updated>
+      <workItem from="1724309108448" duration="44000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
